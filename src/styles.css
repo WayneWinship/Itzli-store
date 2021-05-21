@@ -45,7 +45,7 @@ Variables
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 0.6s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -197,9 +197,7 @@ nav{
   .social-icons{
     display: none;
   }
-  nav{
-    /* position: relative;; */
-  }
+  
   .nav-toggle{
     display: inline-block;
     position: absolute;
@@ -286,4 +284,39 @@ nav{
     display: none;
   }
 }
+/* hero */
+.hero{
+  height: 100vh;
+  width: 100vw;
+}
 /* Footer */
+footer{
+  width: 100vw;
+  height: 155px;
+  background-color: black;
+}
+.footer-center{
+  height: 60%;
+  width: 100%;
+  margin: 2rem 0;
+  display: grid;
+  justify-content: space-around;
+  text-transform: capitalize;
+}
+.footer-center .social-icons{
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 600px;  
+  transition: var(--transition);
+  margin-top: 1.5rem;
+}
+.footer-center .social-icons a:hover{
+  color: var(--clr-primary-8);
+}
+.footer-center p{
+  margin: 1.75rem;
+  text-align: center;
+  letter-spacing: 8px;
+}

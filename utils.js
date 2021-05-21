@@ -21,6 +21,12 @@ const closeMenu = () => {
         sidebar.style.left = '-100%';
     })
 }
+const addTime = () => {
+    const element = grab('.time');
+    let time = new Date();
+    element.textContent = time.getFullYear();
+}
 toggleMenu();
 closeMenu();
+addTime();
 export { grab }
