@@ -156,3 +156,134 @@ main {
 Navbar
 ===============
 */
+nav{
+  height: 60px;
+  width: 100vw;
+  background-color: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+}
+.nav-toggle{
+  display: none;
+}
+.nav-center{
+  display: flex;
+  width: 88%;
+  height: 100%;
+  max-width: var(--max-width);
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+}
+.social-icons{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.logo-top{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px){
+  .links{
+    display: none;
+  }
+  .social-icons{
+    display: none;
+  }
+  nav{
+    /* position: relative;; */
+  }
+  .nav-toggle{
+    display: inline-block;
+    position: absolute;
+    right:5%;
+    top: 3%;
+    transform: translate(-50%,-50%);
+    border: transparent;
+    font-size: 30px;
+    transition: var(--transition);
+    cursor:pointer
+  }
+  .nav-toggle:hover{
+    font-size: 25px;
+  }
+}
+/* Sidebar */
+.sidebar{
+  /* display: none; */
+  top: 0;
+  left: -100%;
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.sidebar-center{
+  height: 100%;
+  width: 88%;
+  position: relative;
+  display: grid;
+  justify-content: last baseline;
+  align-content: space-around;
+  margin: 3rem auto 0 auto;
+}
+.sidebar-exit-btn{
+  position: absolute;
+  display: inline-block;
+  right: 5%;
+  top: 0;
+  /* transform: translateX(-50%,-50%); */
+  font-size: 35px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--clr-white);
+}
+.sidebar-exit-btn:hover{
+  transform: rotateZ(360deg);
+  color: var(--clr-primary-1);
+}
+.sidebar-center .links{
+  display: grid;
+  font-size: 32px;
+  letter-spacing: var(--spacing);
+  justify-content: space-between;
+  height: 330px;
+  text-transform: capitalize
+  ;
+} 
+.sb-link{
+  display: inline-block;
+  transition: all 0.8s ease-in-out;
+  position: relative;
+
+}
+.sb-link:hover{
+  transform: translateX(30px)
+}
+.sb-link a:hover{
+  color: whitesmoke;
+}
+.sidebar-center .social-icons{
+  display: flex;
+  font-size: 32px;
+  justify-content: space-between;
+  width: 330px;  
+  transition: var(--transition);
+}
+.sidebar-center .social-icons a:hover{
+  color: whitesmoke;
+}
+@media screen and (min-width: 775px) {
+  .sidebar{
+    display: none;
+  }
+}
+/* Footer */

@@ -1,1 +1,1 @@
-// Here be code
+import { grab } from "./utils.js";
