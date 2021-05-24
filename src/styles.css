@@ -186,6 +186,9 @@ nav{
   justify-content: space-between;
   width: 150px;
 }
+.nav-center .social-icons a{
+color: var(--clr-primary-1s);
+}
 .logo-top{
   cursor: pointer;
 }
@@ -286,8 +289,17 @@ nav{
 }
 /* hero */
 .hero{
-  height: 100vh;
+  height: 100%;
   width: 100vw;
+}
+.hero-center{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  text-transform: capitalize;
+}
+.hero-img{
+  width: 300px;
 }
 /* Footer */
 footer{
