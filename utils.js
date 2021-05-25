@@ -7,26 +7,33 @@ const grab = (element) => {
     }
 }
 
-// const toggleMenu = () => {
-//     const menu = grab('.nav-toggle');
-//     const sidebar = grab('.sidebar');
-//     menu.addEventListener('click', () => {
-//         sidebar.style.left = 0;
-//     })
-// }
-// const closeMenu = () => {
-//     const exitBtn = grab('.sidebar-exit-btn');
-//     const sidebar = grab('.sidebar');
-//     exitBtn.addEventListener('click', () => {
-//         sidebar.style.left = '-100%';
-//     })
-// }
+
 const addTime = () => {
     const element = grab('.time');
     let time = new Date();
     element.textContent = time.getFullYear();
 }
-// toggleMenu();
-// closeMenu();
+
+const formatPrice = (price) => {
+    let formattedPrice = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format((price / 100).toFixed(2));
+    return formattedPrice
+}
+
+const getStorageItem = (item) => {
+    let storageItem = localStorage.getItem(item);
+    if (storageItem) {
+        storageItem = JSON.parse(localStorage.getItem(item));
+    } else {
+        storageItem = [];
+    }
+}
+
+const setStorageItem = (name, item) => {
+    localStorage.setItem(name, JSON.stringify(item));
+}
+
 addTime();
-export { grab }
+export { grab, formatPrice }
