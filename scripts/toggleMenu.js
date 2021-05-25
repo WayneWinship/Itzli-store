@@ -18,6 +18,19 @@ const toggleDarkMode = () => {
     const checkbox = grab('#checkbox');
     const checkboxSidebar = grab('#checkbox-sidebar');
     checkbox.dafaultChecked = 'true'
+    checkboxSidebar.dafaultChecked = 'true'
+
+
+    // const inputs = [...document.querySelectorAll("input")];
+
+    // const input = inputs.map((n) => {
+
+    //     console.log(n);
+    // })
+    // console.log(input);
+
+
+
 
     checkbox.addEventListener('change', function () {
         if (this.checked) {
@@ -31,7 +44,6 @@ const toggleDarkMode = () => {
         if (this.checked) {
             darkenElements();
         } else {
-
             location.reload();
         }
     });
@@ -49,6 +61,6 @@ const toggleDarkMode = () => {
     }
 }
 
-toggleDarkMode();
 toggleMenu();
 closeMenu();
+toggleDarkMode();

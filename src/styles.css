@@ -271,7 +271,7 @@ input:checked + .slider:before {
     display: inline-block;
     position: absolute;
     right:5%;
-    top: 3%;
+    top: 5%;
     transform: translate(-50%,-50%);
     border: transparent;
     font-size: 30px;
@@ -294,8 +294,9 @@ input:checked + .slider:before {
   position: absolute;
   height: 90%;
   width: 100%;
-  background-color: var(--clr-grey-8);
+  background-color: var(--clr-white);
   transition: var(--transition);
+  box-shadow: var(--dark-shadow);
 }
 .sidebar-center{
   height: 100%;
@@ -315,7 +316,7 @@ input:checked + .slider:before {
   font-size: 35px;
   cursor: pointer;
   transition: var(--transition);
-  color: var(--clr-white);
+  color: var(--clr-red-light);
 }
 .sidebar-exit-btn:hover{
   transform: rotateZ(360deg);
@@ -334,13 +335,15 @@ input:checked + .slider:before {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 800;
   letter-spacing: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
 }
 .sidebar-center .social-icons a{
   color: var(--clr-grey-5);
 }
 .sb-link{
   display: inline-block;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.6s ease-in-out;
   position: relative;
 
 }
@@ -400,10 +403,10 @@ footer{
   display: flex;
   font-size: 24px;
   justify-content: space-between;
-  width: 80vw;
-  max-width: 600px;  
+  width: 80%;
+  max-width: 900px;  
   transition: var(--transition);
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0 auto;
 }
 .footer-center .social-icons a:hover{
   color: var(--clr-primary-8);
