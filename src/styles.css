@@ -157,7 +157,7 @@ main {
 ===============
 */
 nav{
-  height: 60px;
+  height: 65px;
   width: 100vw;
   background-color: var(--clr-white);
   box-shadow: var(--dark-shadow);
@@ -180,12 +180,16 @@ nav{
   width: 370px;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
+  transition: var(--transition);
 }
-.social-icons{
+.links a:hover{
+  color: var(--clr-primary-8);
+}
+/* .social-icons{
   display: flex;
   justify-content: space-between;
   width: 150px;
-}
+} */
 .nav-center .social-icons a{
 color: var(--clr-primary-1s);
 }
@@ -270,8 +274,8 @@ input:checked + .slider:before {
   .nav-toggle{
     display: inline-block;
     position: absolute;
-    right:5%;
-    top: 5%;
+    left:6%;
+    top: 4%;
     transform: translate(-50%,-50%);
     border: transparent;
     font-size: 30px;
@@ -282,6 +286,18 @@ input:checked + .slider:before {
     font-size: 25px;
   }
 }
+.cart-toggle{
+  border: transparent;
+  font-size: 2rem;
+}
+.cart-toggle i{
+  transition: var(--transition);
+}
+.cart-toggle i:hover{
+  cursor: pointer;
+  color: rgb(255, 112, 29);
+}
+
 /*
 =============== 
     Sidebar
@@ -305,12 +321,12 @@ input:checked + .slider:before {
   display: grid;
   justify-content: last baseline;
   align-content: space-around;
-  margin: 3rem auto 0 auto;
+  margin: 1.5rem auto 0 auto;
 }
 .sidebar-exit-btn{
   position: absolute;
   display: inline-block;
-  right: 5%;
+  right: 4%;
   top: 0;
   /* transform: translateX(-50%,-50%); */
   font-size: 35px;
@@ -329,6 +345,7 @@ input:checked + .slider:before {
   justify-content: space-between;
   height: 330px;
   text-transform: capitalize;
+  margin-top: 4rem;
 } 
 .sidebar-center .links a{
   color: black;
@@ -357,8 +374,10 @@ input:checked + .slider:before {
   display: flex;
   font-size: 32px;
   justify-content: space-between;
-  width: 330px;  
+  /* width: 330px;   */
   transition: var(--transition);
+  /* margin: auto 0 auto 8; */
+  gap: 0 3.5rem;
 }
 .sidebar-center .social-icons a:hover{
   color: whitesmoke;
@@ -374,7 +393,7 @@ input:checked + .slider:before {
 ===============
 */
 .hero{
-  height: 100%;
+  height: calc(60vh - 65px);
   width: 100vw;
 }
 .hero-center{
@@ -388,16 +407,17 @@ input:checked + .slider:before {
 */
 footer{
   width: 100vw;
-  height: 155px;
+  height: 250px;
   background-color: black;
 }
 .footer-center{
-  height: 60%;
+  height: 100%;
   width: 100%;
-  margin: 2rem 0;
+  /* margin-top: 6rem; */
   display: grid;
   justify-content: space-around;
   text-transform: capitalize;
+  align-items: center;
 }
 .footer-center .social-icons{
   display: flex;
