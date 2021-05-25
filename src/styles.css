@@ -301,6 +301,10 @@ color: var(--clr-primary-1s);
 .hero-img{
   width: 300px;
 }
+.item-img{
+  object-fit: fill;
+  height: 15rem;
+}
 /* Footer */
 footer{
   width: 100vw;

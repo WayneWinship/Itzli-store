@@ -1,8 +1,5 @@
-import { grab } from "./utils.js";
-import "./scripts/toggleMenu.js"
-import storeAPI from "./src/store-items.js"
-
-const heroCenter = grab('.hero-center');
+import { NumberFormat } from "../utils";
+// needs cart functionality
 
 
 
@@ -20,6 +17,6 @@ var images = storeAPI.map((item) => {
         `
 }).join("");
 
-heroCenter.innerHTML = images;
+//AddYourDiv.innerHTML = images;
 
 
