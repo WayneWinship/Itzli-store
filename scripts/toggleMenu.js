@@ -17,7 +17,6 @@ const closeMenu = () => {
 const toggleDarkMode = () => {
     const checkbox = grab('#checkbox');
     const checkboxSidebar = grab('#checkbox-sidebar');
-    console.log(checkbox);
     checkbox.dafaultChecked = 'true'
 
     checkbox.addEventListener('change', function () {
