@@ -40,9 +40,11 @@
                 <span class="slider round"></span>
             </label>
             <!-- cart btn -->
-            <button class="cart-toggle">
-                <i class="fas fa-shopping-cart"></i>
-            </button>
+            <span class="cart-open-container">
+                <button class="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </span>
         </div>
     </nav>
     <!-- sidebar -->
@@ -94,6 +96,76 @@
             </ul>
         </aside>
     </div>
+    <!-- cart -->
+    <div class="cart">
+        <aside class="cart-center section-center">
+            <span class="close-cart">
+                <button class="close-cart-btn">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+            </span>
+            <div class="cart-items">
+                <!-- single product -->
+                <div class="product">
+                    <img src="https://res.cloudinary.com/khoigoo-tawlee/image/upload/v1621819167/Itzli-store-items/pexels-lisa-2430934_v2hggu.jpg"
+                        alt="">
+                    <div class="product-info">
+                        <p class="product-company">Kurt's</p>
+                        <p class="product-name">Old Timey thing</p>
+                        <a class="remove-item">remove</a>
+                    </div>
+                    <div class="product-price-container">
+                        <div class="item-count-container">
+                            <span class="increase-item-count">
+                                <button class="increase-itm-count-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                            <p class="item-amount">5</p>
+                            <span class="decrease-item-count">
+                                <button class="decrease-itm-count-btn">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="product-price">$299.99</div>
+                    </div>
+                </div>
+                <!-- end single product -->
+                <!-- single product -->
+                <div class="product">
+                    <img src="https://res.cloudinary.com/khoigoo-tawlee/image/upload/v1621819167/Itzli-store-items/pexels-lisa-2430934_v2hggu.jpg"
+                        alt="">
+                    <div class="product-info">
+                        <p class="product-company">Kurt's</p>
+                        <p class="product-name">Old Timey thing</p>
+                        <a class="remove-item">remove</a>
+                    </div>
+                    <div class="product-price-container">
+                        <div class="item-count-container">
+                            <span class="increase-item-count">
+                                <button class="increase-itm-count-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                            <p class="item-amount">5</p>
+                            <span class="decrease-item-count">
+                                <button class="decrease-itm-count-btn">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="product-price">$299.99</div>
+                    </div>
+                </div>
+                <!-- end single product -->
+            </div>
+            <div class="cart-end-total">
+                <p class="total-items">No. Items: 4</p>
+                <p class="total-cost">total: $199.00</p>
+            </div>
+        </aside>
+    </div>
     <!-- hero -->
     <section class="section hero">
         <div class="hero-center section-center">
@@ -130,7 +202,7 @@
                     </a>
                 </li>
             </ul>
-            <p>All rights reserved. Itzli&reg; <span class="time"></span></p>
+            <p>&reg;<span class="time"></span> <span class="footer-name">Itzli.</span> All rights reserved. </p>
         </div>
     </footer>
     <!-- JS -->

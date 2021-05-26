@@ -45,7 +45,6 @@ const toggleDarkMode = () => {
         nav.style["box-shadow"] = '0 2px 5px 0.5px var(--clr-white)';
         navToggle.style.color = 'white'
         navToggle.style.backgroundColor = 'black'
-        sidebar.style.backgroundColor = 'var(--clr-grey-2)'
         nav.style.backgroundColor = 'black'
         background.style.backgroundColor = 'black'
         logoTop.src = "./src/Itzli-store-logo-dark.svg"
@@ -54,7 +53,24 @@ const toggleDarkMode = () => {
         darkenElements()
     }
 }
+const closeCart = () => {
+    const closeCartBtn = grab('.close-cart-btn');
+    const cartToggle = grab('.cart-toggle');
+    const cart = grab('.cart');
 
+    cartToggle.addEventListener('click', () => {
+        cart.style.right = 0;
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+        cart.style.right = '-110%';
+    });
+
+
+
+}
+
+closeCart();
 toggleMenu();
 closeMenu();
 toggleDarkMode();
