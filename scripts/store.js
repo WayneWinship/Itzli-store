@@ -4,8 +4,8 @@ let store = getStorageItem("store");
 
 const setupStore = (items) => {
     store = items.map((itm) => {
-        const { id, fields: { company, type, featured, price, name, image, } } = itm;
-        let img = image.url
+        const { id, fields: { company, type, featured, price, name, image } } = itm;
+        let img = image[0].url
         return { id, company, type, featured, price, name, img }
     })
     setStorageItem('store', store)
