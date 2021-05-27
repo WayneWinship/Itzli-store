@@ -1,3 +1,7 @@
+import * as URL from "./src/store-items.js";
+
+const fetchData = () => URL.default;
+
 const grab = (element) => {
     const object = document.querySelector(element);
     if (object) {
@@ -22,18 +26,24 @@ const formatPrice = (price) => {
     return formattedPrice
 }
 
+
+
 const getStorageItem = (item) => {
     let storageItem = localStorage.getItem(item);
     if (storageItem) {
-        storageItem = JSON.parse(localStorage.getItem(item));
+        storageItem = JSON.parse(localStorage.getItem(item))
     } else {
         storageItem = [];
     }
+    return storageItem;
+
 }
 
 const setStorageItem = (name, item) => {
     localStorage.setItem(name, JSON.stringify(item));
 }
 
+
+
 addTime();
-export { grab, formatPrice }
+export { grab, formatPrice, fetchData, getStorageItem, setStorageItem }

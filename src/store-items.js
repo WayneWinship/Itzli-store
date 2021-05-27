@@ -9,6 +9,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": true,
                 "price": 7453,
                 "name": "Heart encased vase",
@@ -31,6 +32,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": true,
                 "price": 88880,
                 "name": "Egyptian Gold",
@@ -53,6 +55,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 5580,
                 "name": "Earthenware Round",
@@ -75,6 +78,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": true,
                 "price": 23333,
                 "name": "Italian glass vase",
@@ -97,6 +101,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 7780,
                 "name": "Optical glint container",
@@ -119,6 +124,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 6680,
                 "name": "French Deluxe Vase",
@@ -141,6 +147,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 3333,
                 "name": "Watercrest Yellow Vase",
@@ -163,6 +170,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 3333,
                 "name": "Talcalan Pewter Vase",
@@ -185,6 +193,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 66680,
                 "name": "Tokyo Luminous Glass Vase",
@@ -206,6 +215,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 1337,
                 "name": "Seussian Obtemellion Vase",
@@ -228,6 +238,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 993,
                 "name": "Goldfish Thimble Vase",
@@ -250,6 +261,7 @@ const apiTHO =
                     "#f15025",
                     "#222"
                 ],
+                "type": "vase",
                 "featured": false,
                 "price": 22280,
                 "name": "Pack Jarrow Antique Vase",
