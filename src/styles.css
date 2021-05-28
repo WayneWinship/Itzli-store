@@ -708,7 +708,7 @@ footer{
 ===============
 */
 .about-center{
-  background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)),url(./images/pexels-steve-johnson-1572386.jpg) center/cover no-repeat fixed  ;
+  background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)),url(https://res.cloudinary.com/khoigoo-tawlee/image/upload/v1622219059/Itzli-store-items/backgrounds/pexels-steve-johnson-1572386_uyepxo.jpg) center/cover no-repeat fixed  ;
   height: 100%;
   display: grid;
   text-align: center;
@@ -790,6 +790,7 @@ footer{
   /* grid-template-rows: 1fr 1fr auto; */
   text-align: center;
   color: black;
+  /* margin-bottom: 3rem; */
 }
 .contact-center h2{
   padding: 2rem;
