@@ -702,3 +702,127 @@ footer{
   color: var(--clr-primary-8); 
   cursor: pointer;
 }
+
+/*=============== 
+    About
+===============
+*/
+.about-center{
+  background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)),url(./images/pexels-steve-johnson-1572386.jpg) center/cover no-repeat fixed  ;
+  height: 100%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-center i{
+  font-size: 7rem;
+  color: chocolate;
+  margin-bottom: 0;
+}
+
+.hero-motto{
+  color: var(--clr-white);
+  width: 77%;
+  margin: -17rem auto 0 auto;
+  font-size: 6rem;
+}
+.review-section{
+  background-color: maroon;
+  height: 100%;
+  position: relative;
+  margin-top: -5rem;
+  text-align: center;
+
+}
+.review-section h3{
+  width: 55%;
+  margin: 0 auto;
+  color: black;
+  padding-top: 4rem;
+}
+.review-section p{
+  color: var(--clr-white);
+}
+.header{
+  position: absolute;
+  width: 40%;
+  height: 50px;
+  text-align: center;
+  /* margin: -6rem auto 2rem auto; */
+  color: rgb(49, 28, 0);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.skew-header{
+  background-color: chocolate;
+  transform: skewX(160deg);
+}
+.reviews-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  width: 97%;
+  margin-left: 1.75rem;
+}
+.review{
+  height: 200px;
+  width: 350px;
+  background-color: rgb(106, 1, 1);
+  display: grid;
+  grid-template-rows: repeat(1fr);
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  border: 4px solid maroon;
+}
+.review span{
+  display: inline-block;
+  font-size: 2rem;
+}
+.contact-center{
+  height: 30vh;
+  background-color: rgb(0, 83, 92);
+  /* display: grid; */
+  /* grid-template-rows: 1fr 1fr auto; */
+  text-align: center;
+  color: black;
+}
+.contact-center h2{
+  padding: 2rem;
+}
+.contact-center h3{
+  color: black;
+}
+.contact-form input{
+  width: 400px;
+}
+.contact-center button{
+  padding: 0.5rem 1rem;
+}
+@media screen and (max-width: 1200px){
+  .about-center h1{
+    font-size: 5.2rem;
+  }
+}
+@media screen and (max-width: 850px){
+  .about-center h1{
+    font-size: 4.5rem;
+  }
+}
+@media screen and (max-width: 770px){
+  .about-center h1{
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 650px){
+  .about-center h1{
+    font-size: 3rem;
+  }
+  .contact-form input{
+    width: 300px;
+  }
+}

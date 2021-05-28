@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/fontawesome-free-5.15.3-web/css/all.min.css">
+    <title>Itzli Store | Home</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <div class="nav-header">
+                <img class="logo-top" src="./src/Itzli-store-logo.svg" alt="itzli-logo">
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- nav-links -->
+            <ul class="links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+                <li>
+                    <a href="products.html">products</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+            <!-- Add dark mode & cart button -->
+            <label class="switch">
+                <input type="checkbox" id="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <!-- cart btn -->
+            <span class="cart-open-container">
+                <button class="cart-toggle">
+                    <span class="toggle-amount-container">
+                        2
+                    </span>
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </span>
+        </div>
+    </nav>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <aside class="sidebar-center">
+            <span class="sidebar-exit-btn">
+                <i class="fas fa-times"></i>
+            </span>
+            <ul class="links">
+                <li class="sb-link">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="sb-link">
+                    <a href="about.html">about</a>
+                </li>
+                <li class="sb-link">
+                    <a href="products.html">products</a>
+                </li>
+                <li class="sb-link">
+                    <a href="contact.html">contact</a>
+                </li>
+            </ul>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <!-- cart -->
+    <div class="cart">
+        <aside class="cart-center section-center">
+            <span class="close-cart">
+                <button class="close-cart-btn">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+            </span>
+            <div class="cart-items">
+                <!-- single product -->
+                <div class="product">
+                    <img src="https://res.cloudinary.com/khoigoo-tawlee/image/upload/v1621819167/Itzli-store-items/pexels-lisa-2430934_v2hggu.jpg"
+                        alt="">
+                    <div class="product-info">
+                        <p class="product-company">Kurt's</p>
+                        <p class="product-name">Old Timey thing</p>
+                        <a class="remove-item">remove</a>
+                    </div>
+                    <div class="product-price-container">
+                        <div class="item-count-container">
+                            <span class="increase-item-count">
+                                <button class="increase-itm-count-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                            <p class="item-amount">5</p>
+                            <span class="decrease-item-count">
+                                <button class="decrease-itm-count-btn">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="product-price">$299.99</div>
+                    </div>
+                </div>
+                <!-- end single product -->
+                <!-- single product -->
+                <div class="product">
+                    <img src="https://res.cloudinary.com/khoigoo-tawlee/image/upload/v1621819167/Itzli-store-items/pexels-lisa-2430934_v2hggu.jpg"
+                        alt="">
+                    <div class="product-info">
+                        <p class="product-company">Kurt's</p>
+                        <p class="product-name">Old Timey thing</p>
+                        <a class="remove-item">remove</a>
+                    </div>
+                    <div class="product-price-container">
+                        <div class="item-count-container">
+                            <span class="increase-item-count">
+                                <button class="increase-itm-count-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                            <p class="item-amount">5</p>
+                            <span class="decrease-item-count">
+                                <button class="decrease-itm-count-btn">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="product-price">$299.99</div>
+                    </div>
+                </div>
+                <!-- end single product -->
+            </div>
+            <div class="cart-end-total">
+                <p class="total-items">No. Items: 4</p>
+                <p class="total-cost">total: $199.00</p>
+            </div>
+        </aside>
+    </div>
+    <!-- hero -->
+    <section class="section hero">
+        <div class="about-center section-center">
+            <span>
+                <i class="fas fa-crown"></i>
+            </span>
+            <h1 class="hero-motto">The unapologetic authority on all the things you need.</h1>
+        </div>
+    </section>
+    <section class="review-section section-center">
+        <div class="header">
+            <div class="skew-header">
+                <h1>Reviews</h1>
+            </div>
+        </div>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis architecto voluptate minima impedit
+            accusantium vo atque odit sed cumque accusamus maiores obcaecati sit!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium</p>
+        <div class="reviews-container">
+            <!-- single review -->
+            <article class="review">
+                <span class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <h2>3.5 out of 5</h2>
+                <p>Hillbillies Anonymous</p>
+            </article>
+            <article class="review">
+                <span class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <h2>3.5 out of 5</h2>
+                <p>Hillbillies Anonymous</p>
+            </article>
+            <article class="review">
+                <span class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <h2>3.5 out of 5</h2>
+                <p>Hillbillies Anonymous</p>
+            </article>
+
+            <!-- end single review -->
+        </div>
+    </section>
+    <section class="contact-center section-center">
+        <h2>Join Us!!</h2>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, earum.</h3>
+        <form action="" class="contact-form">
+            <input type="text" name="email" placeholder="Stay up to date!!">
+            <button type="submit">Go</button>
+        </form>
+        <p>all responses are appreciated!</p>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-center">
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>&reg;<span class="time"></span> <span class="footer-name">Itzli.</span> All rights reserved. </p>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
