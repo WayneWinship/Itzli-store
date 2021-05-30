@@ -1,2 +1,2 @@
-import { grab } from "./utils.js";
-import "./scripts/toggleMenu.js"
+import "../scripts/toggleMenu.js"
+import { grab } from "../utils.js"
