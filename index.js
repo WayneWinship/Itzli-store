@@ -1,5 +1,12 @@
 import "./scripts/toggleMenu.js"
 
+/****************************************
+  Notes: 
+    Needs a categories sections below the featured that redirects to the 
+    products page that uses address to check for said category, if they exist
+    sort by (couched, tables, etc) and if not then display the page normally.
+******************************************/
+
 import { grab, fetchData } from "./utils.js";
 import { setupStore, store } from "./scripts/store.js";
 
