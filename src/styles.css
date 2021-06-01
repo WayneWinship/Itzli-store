@@ -848,6 +848,7 @@ footer{
 .products-sidebar{
   background: var(--clr-white);
   box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
 }
 .products-container{
   display: grid;
@@ -920,14 +921,57 @@ footer{
 }
 .search-form{
   padding: 1rem;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid rgba(58, 58, 58, 0.5);
 }
 .search-input{
   width: 176px;
+  margin: 0 auto; 
 }
 
 .button-container{
   margin: 1rem auto;
   width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 0 0.5rem
+}
+.page-btn{
+  /* height: 1.5rem; */
+  /* width: 2rem; */
+  padding: 0.1rem 0.2rem;
+  box-shadow: var(--light-shadow);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.active-btn{
+  background-color: rgb(0, 0, 0);
+  color: whitesmoke;
+  width: 3rem;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+}
+.next-btn, .prev-btn{
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.company-list-container{
+  display: grid;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  gap: 0.5rem 0;
+}
+.company-btn{
+  border: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 1rem;
+}
+.company-btn:hover{
+  color: blue;
 }
 
 @media screen and (max-width: 650px){

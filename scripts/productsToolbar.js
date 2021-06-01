@@ -2,10 +2,12 @@ import { grab } from "../utils.js";
 import displayItems from "../scripts/displayItems.js";
 import paginate from "../scripts/paginate.js";
 import displayButtons from "../scripts/displayButtons.js";
+import addBtnEvtListener from './addBtnEvtListener.js';
+import { store } from '../scripts/store.js';
 
 const btnContainer = grab('.button-container');
 
-const searchFunctionality = (store) => {
+const searchFunctionality = () => {
     const searchForm = grab('.search-form');
     const searchInput = grab('.search-input');
     searchForm.addEventListener('keyup', function (e) {
@@ -29,15 +31,57 @@ const searchFunctionality = (store) => {
                 </div>
                     `
             } else {
-                const storeWithPages = paginate(newStore);
-                console.log(storeWithPages);
-                displayItems(storeWithPages[0], grab('.products-container'));
-                displayButtons(btnContainer, storeWithPages, 0)
+                if (newStore.length > 1) {
+                    const storeWithPages = paginate(newStore);
+                    console.log(storeWithPages);
+                    displayItems(storeWithPages[0], grab('.products-container'));
+                    displayButtons(btnContainer, storeWithPages, 0);
+                    addBtnEvtListener(0, storeWithPages);
+                } else {
+                    displayItems(newStore, grab('.products-container'));
+                    displayButtons(btnContainer, newStore, 0);
+                    addBtnEvtListener(0, newStore);
+                }
+
             }
 
+
+        } else {
+            const storeWithPages = paginate(store);
+            displayItems(storeWithPages[0], grab('.products-container'));
+            displayButtons(btnContainer, storeWithPages, 0);
+            addBtnEvtListener(0, storeWithPages);
+        }
+    })
+}
+
+const companiesSortMenu = (store) => {
+    let companies = ['all', ...new Set(store.map((itm) => itm.company))];
+
+    const listContainer = grab('.company-list-container');
+
+    listContainer.innerHTML = companies.map((company) => {
+        return `
+            <button class="company-btn">${company}</button>
+        `
+    }).join('')
+
+    listContainer.addEventListener('click', function (e) {
+        const element = e.target;
+        if (element.classList.contains('company-btn')) {
+            let newStore = [];
+            if (element.textContent === 'all') {
+                newStore = paginate([...store]);
+            } else {
+                newStore = paginate(store.filter((itm) => itm.company === e.target.textContent))
+            }
+
+            displayItems(newStore[0], grab('.products-container'))
+            displayButtons(grab('.button-container'), newStore, 0)
+            addBtnEvtListener(0, newStore);
         }
     })
 }
 
 
-export { searchFunctionality }
+export { searchFunctionality, companiesSortMenu }

@@ -1,6 +1,7 @@
 import { formatPrice } from "../utils.js";
 
 var displayItems = (products, element) => {
+    // console.log(products);
     element.innerHTML = products.map((product) => {
         let { id, company, img, name, price, type } = product;
         return `

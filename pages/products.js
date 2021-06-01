@@ -4,7 +4,17 @@ import { setupStore, store } from "../scripts/store.js";
 import displayItems from "../scripts/displayItems.js";
 import paginate from "../scripts/paginate.js"
 import displayButtons from "../scripts/displayButtons.js";
-import { searchFunctionality } from "../scripts/productsToolbar.js";
+import { searchFunctionality, companiesSortMenu } from "../scripts/productsToolbar.js";
+import addBtnEvtListener from '../scripts/addBtnEvtListener.js';
+
+/***********************************
+ * Bug:
+ *  The search function after a while leaves the prev/next button useless.
+ *  Last fix was searchFunc in productsToolbar.js
+ * 
+ * *************************************/
+
+
 
 const btnContainer = grab('.button-container');
 const searchInput = grab('.search-input');
@@ -31,31 +41,35 @@ if (store.length === 0) {
 }
 
 
-searchFunctionality(store);
+searchFunctionality();
+companiesSortMenu(store);
+addBtnEvtListener(index, newStoreList);
 
 
-btnContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('button-container')) return
 
-    if (e.target.classList.contains('page-btn')) {
-        index = parseInt(e.target.dataset.index);
-    }
 
-    if (e.target.classList.contains('next-btn')) {
-        index++;
-        if (index > newStoreList.length - 1) {
-            index = 0;
-        }
-    }
+// btnContainer.addEventListener('click', function (e) {
+//     if (e.target.classList.contains('button-container')) return
 
-    if (e.target.classList.contains('prev-btn')) {
-        index--;
-        if (index < newStoreList.length - 1) {
-            index = newStoreList.length - 1;
-        }
-    }
-    displayPage()
-})
+//     if (e.target.classList.contains('page-btn')) {
+//         index = parseInt(e.target.dataset.index);
+//     }
+
+//     if (e.target.classList.contains('next-btn')) {
+//         index++;
+//         if (index > newStoreList.length - 1) {
+//             index = 0;
+//         }
+//     }
+
+//     if (e.target.classList.contains('prev-btn')) {
+//         index--;
+//         if (index < newStoreList.length - 1) {
+//             index = newStoreList.length - 1;
+//         }
+//     }
+//     displayPage()
+// })
 
 
 
