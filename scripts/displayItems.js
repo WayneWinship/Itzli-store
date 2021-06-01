@@ -1,22 +1,26 @@
-import { NumberFormat } from "../utils";
+// import { NumberFormat } from "../utils.js";
 // needs cart functionality
 
 
 
-var images = storeAPI.map((item) => {
-    let { fields, id } = item;
-    let { name, image, price } = fields;
-    let img = image[0].url
-    return `
+var displayItems = (products, element) => {
+    console.log(products, element.innerHTML);
+    // let { fields, id } = products;
+    element.innerHTML = products.map((product) => {
+        let { id, company, img, name, price, type } = product;
+        return `
     <article class="single-item">
-        <div class="item-img" >
-            <img src="${img}" alt="${name}" class="hero-img"></br>
+        <div class="single-item-img-container" >
+            <img src="${img}" alt="${name}" class="single-item-img"></br>
         </div>
         <p>${name}</br> price: $${price}</p>
     </article>
         `
-}).join("");
+    }).join('')
 
-//AddYourDiv.innerHTML = images;
+}
+
+
+export default displayItems;
 
 
