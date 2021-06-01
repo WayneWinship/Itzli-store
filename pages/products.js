@@ -4,31 +4,37 @@ import { setupStore, store } from "../scripts/store.js";
 import displayItems from "../scripts/displayItems.js";
 import paginate from "../scripts/paginate.js"
 import displayButtons from "../scripts/displayButtons.js";
+import { searchFunctionality } from "../scripts/productsToolbar.js";
 
-const btnContainer = grab('.button-container')
+const btnContainer = grab('.button-container');
+const searchInput = grab('.search-input');
+searchInput.value = "";
 
 let index = 0;
 let newStoreList = [];
-
-const init = async () => {
-    if (store.length === 0) {
-        const data = await fetchData();
-        if (data) {
-            setupStore(data);
-        }
-    }
-}
 
 const displayPage = () => {
     displayItems(newStoreList[index], grab('.products-container'));
     displayButtons(btnContainer, newStoreList, index);
 };
 
-newStoreList = paginate(store);
-displayPage();
+if (store.length === 0) {
+    const data = fetchData();
+    if (data) {
+        setupStore(data);
+    }
+    newStoreList = paginate(store);
+    displayPage();
+} else {
+    newStoreList = paginate(store);
+    displayPage();
+}
+
+
+searchFunctionality(store);
+
 
 btnContainer.addEventListener('click', function (e) {
-    console.log(index);
     if (e.target.classList.contains('button-container')) return
 
     if (e.target.classList.contains('page-btn')) {
@@ -48,16 +54,11 @@ btnContainer.addEventListener('click', function (e) {
             index = newStoreList.length - 1;
         }
     }
-    console.log(index);
     displayPage()
 })
 
 
 
+
 // const vaseItms = store.filter(itm => itm.type === 'vase')
-
-
-
-
-
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);

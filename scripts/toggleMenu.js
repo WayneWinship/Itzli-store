@@ -37,12 +37,14 @@ const toggleDarkMode = () => {
         const sidebarExitBtn = grab('.sidebar-exit-btn');
         const footer = grab('footer');
         const cartToggle = grab('.cart-toggle');
-        const singleItems = [...document.querySelectorAll('.single-item p')].map((single) => {
-            // single.style.backgroundColor = 'var(--clr-white)';
-            console.log(single);
-            single.style.color = 'var(--clr-white)';
-        })
+        const fixSingleItem = () => {
+            [...document.querySelectorAll('.single-item p')].map((single) => {
+                single.style.color = 'var(--clr-white)';
+                single.parentElement.style["box-shadow"] = '0 0.2px 0.5px 0.5px orangered';
+            });
+        }
 
+        fixSingleItem();
         cartToggle.style.backgroundColor = 'black';
         cartToggle.style.color = 'var(--clr-white)';
         footer.style["box-shadow"] = '0 -2px 7px 0.5px var(--clr-white)';
