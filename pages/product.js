@@ -1,7 +1,8 @@
-import "../scripts/toggleMenu.js"
+// import "../scripts/toggleMenu.js"
 import { grab } from "../utils.js";
-import * as fakeApi from "../src/store-items.js"
-import { formatPrice } from "../utils.js"
+import * as fakeApi from "../src/store-items.js";
+import { formatPrice } from "../utils.js";
+import { addToCart } from "../scripts/cart/setupCart.js";
 
 const singleProductImage = grab('.single-product-image-container img');
 const singleProductName = grab('.single-product-name');
@@ -10,6 +11,7 @@ const singleProductPrice = grab('.single-product-price span');
 const colorAvailable1 = grab('.color-available1');
 const colorAvailable2 = grab('.color-available2');
 const productMain = grab('.product-main');
+const addToCartBtn = grab('.single-product-addToCart-btn');
 
 window.addEventListener('DOMContentLoaded', function () {
     try {
@@ -19,7 +21,6 @@ window.addEventListener('DOMContentLoaded', function () {
         const singleProduct = data.filter(itm => {
             return itm.id == URLid.slice(4, URLid.length)
         });
-
         const { colors, company, image, name, price } = singleProduct[0].fields;
         const img = image[0].url;
 
@@ -35,6 +36,13 @@ window.addEventListener('DOMContentLoaded', function () {
         });
         colorAvailable1.style.backgroundColor = colorList[0];
         colorAvailable2.style.backgroundColor = colorList[1];
+
+        addToCartBtn.setAttribute('data-id', singleProduct[0].id);
+
+        addToCartBtn.addEventListener('click', function (e) {
+            addToCart(e.target.dataset.id);
+        })
+
     } catch (error) {
         console.log(error);
         productMain.innerHTML = `

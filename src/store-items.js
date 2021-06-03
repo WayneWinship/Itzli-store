@@ -173,7 +173,7 @@ const apiTHO =
                 "type": "vase",
                 "featured": false,
                 "price": 3333,
-                "name": "Talcalan Pewter Vase",
+                "name": "Taxcalan Pewter Vase",
                 "image": [
                     {
                         "id": "1VfTeG9N8zr20syfN",

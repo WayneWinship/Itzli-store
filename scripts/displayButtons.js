@@ -1,5 +1,5 @@
 const displayButtons = (container, pages, activeIndex) => {
-    console.log(pages);
+    // console.log(pages);
     // console.log(container, pages, activeIndex);
     let btns = pages.map((_, pageIndex) => {
         // If active page is equal to any iterated page object add active

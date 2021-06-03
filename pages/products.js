@@ -6,6 +6,8 @@ import paginate from "../scripts/paginate.js"
 import displayButtons from "../scripts/displayButtons.js";
 import { searchFunctionality, companiesSortMenu } from "../scripts/productsToolbar.js";
 import addBtnEvtListener from '../scripts/addBtnEvtListener.js';
+import "../scripts/cart/setupCart.js"
+
 
 /***********************************
  * Bug:

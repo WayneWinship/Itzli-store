@@ -1,4 +1,5 @@
 import { formatPrice } from "../utils.js";
+import { addToCart } from "./cart/setupCart.js";
 
 var displayItems = (products, element) => {
     // console.log(products);
@@ -14,11 +15,16 @@ var displayItems = (products, element) => {
         </a>
         <p class="single-item-company">${company}</p>
         <p class="single-item-price">price: ${formatPrice(price)}
-        <span class="single-item-cart"><i class="fas fa-cart-plus"></i></span></p>
+        <span class="single-item-cart" data-id=${id}><i class="fas fa-cart-plus"></i></span></p>
     </article>
         `
     }).join('')
-
+    element.addEventListener('click', function (e) {
+        const parent = e.target.parentElement;
+        if (parent.classList.contains('single-item-cart')) {
+            addToCart(parent.dataset.id);
+        }
+    })
 }
 
 

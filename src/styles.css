@@ -447,30 +447,47 @@ input:checked + .slider:before {
 }
 .cart-checkout{
   position: absolute;
-  bottom: 1%;
+  bottom: 1.5%;
   left: 51%;
   transform: translate(-50%,0);
-  padding: 1rem 8.25rem;
+  padding: 1.25rem 8.25rem;
   font-size: 1.25rem;
+  background-color: rgb(255, 137, 27);
+  color: black;
+  border-radius: var(--radius);
+  border: 3px solid rgb(255, 137, 27);
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: var(--dark-shadow);
+}
+.cart-checkout:hover{
+  background-color: black;
+  color: rgb(255, 137, 27);
 }
 .total-items{
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 .total-items span{
   color: black;
+  font-size: 1.5rem;
 }
 .total-cost{
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 .total-cost span{
   color: black;
+  font-size: 1.5rem;
 }
 .product{
   display: flex;
   justify-content: start;
-  gap: 0 1rem;
+  gap: 0 0.5rem;
   /* grid-template-columns: 1fr auto auto; */
   box-shadow: var(--dark-shadow);
   padding: 1rem 0.75rem;
@@ -482,31 +499,40 @@ input:checked + .slider:before {
   margin-top: -1rem;
   color: rgba(143, 143, 143, 0.3);
 }
-.product img{
+.cart-img-container{
   height: 100px;
-  object-fit: cover;
+  width: 95px;
   border: 1px solid rgb(255, 0, 25);
   border-radius: var(--radius);
 }
-.product-info a{
-  cursor: pointer;
+.product img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.product-info{
+  width: 288px;
+}
+.product-info p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--clr-black);
 }
 .remove-item{
   display: inline-block;
   position: absolute;
   color: blue;
   left: 50%;
-  bottom: 5%;
+  bottom: 10%;
   cursor: pointer;
-}
-.product-info p{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: var(--clr-black);
+  border: transparent;
+  width: 2.75rem;
+  height: 1rem;
+  z-index: 5;
 }
 .product-price-container{
   display: flex;
   align-items: center;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
 }
 
 .price-count-container{
@@ -531,7 +557,7 @@ input:checked + .slider:before {
 }
 .item-amount{
   border: 1px solid rgba(68, 68, 68,0.5);
-  width: 22px;
+  width: 33px;
   height: 33px;
   padding-top: 5px;
   text-align: center;
@@ -563,7 +589,7 @@ input:checked + .slider:before {
 .your-cart{
   position: absolute;
   left: 50%;
-  top: 5.5%;
+  top: 6.5%;
   transform: translate(-50%,-50%);
 }
 .your-cart h3{

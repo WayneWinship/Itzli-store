@@ -62,23 +62,23 @@ const toggleDarkMode = () => {
         darkenElements()
     }
 }
-const closeCart = () => {
-    const closeCartBtn = grab('.close-cart-btn');
-    const cartToggle = grab('.cart-toggle');
-    const cart = grab('.cart');
+// const closeCart = () => {
+//     const closeCartBtn = grab('.close-cart-btn');
+//     const cartToggle = grab('.cart-toggle');
+//     const cart = grab('.cart');
 
-    cartToggle.addEventListener('click', () => {
-        cart.style.display = 'inline-block';
-        cart.style.right = 0;
-    });
+//     cartToggle.addEventListener('click', () => {
+//         cart.style.display = 'inline-block';
+//         cart.style.right = 0;
+//     });
 
-    closeCartBtn.addEventListener('click', () => {
-        cart.style.display = 'none';
-        cart.style.right = '-110%';
-    });
-}
+//     closeCartBtn.addEventListener('click', () => {
+//         cart.style.display = 'none';
+//         cart.style.right = '-110%';
+//     });
+// }
 
-closeCart();
+// closeCart();
 toggleMenu();
 closeMenu();
 toggleDarkMode();

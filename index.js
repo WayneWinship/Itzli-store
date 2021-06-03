@@ -1,6 +1,10 @@
 import "./scripts/toggleMenu.js"
 import { grab, fetchData } from "./utils.js";
 import { setupStore, store } from "./scripts/store.js";
+import "../scripts/cart/setupCart.js"
+import "./scripts/cart/setupCart.js";
+// import "./scripts/cart/cartToggle.js"
+// import addToCartHTML from "./scripts/cart/addToCartHTML.js"
 
 /****************************************
   Notes: 
