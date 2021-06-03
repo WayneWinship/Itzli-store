@@ -41,9 +41,9 @@ if (store.length === 0) {
 }
 
 
+addBtnEvtListener(index, newStoreList);
 searchFunctionality();
 companiesSortMenu(store);
-addBtnEvtListener(index, newStoreList);
 
 
 
