@@ -1,4 +1,6 @@
 import "./scripts/toggleMenu.js"
+import { grab, fetchData } from "./utils.js";
+import { setupStore, store } from "./scripts/store.js";
 
 /****************************************
   Notes: 
@@ -6,9 +8,6 @@ import "./scripts/toggleMenu.js"
     products page that uses address to check for said category, if they exist
     sort by (couched, tables, etc) and if not then display the page normally.
 ******************************************/
-
-import { grab, fetchData } from "./utils.js";
-import { setupStore, store } from "./scripts/store.js";
 
 const init = async () => {
     const data = await fetchData();
@@ -27,7 +26,7 @@ const displayFeatured = (featured) => {
 
 
     panels.innerHTML = featured.map((itm, index) => {
-        let { id, company, name, img } = itm;
+        let { id, name, img } = itm;
 
         let position = 'next';
 
@@ -41,7 +40,7 @@ const displayFeatured = (featured) => {
         // after you make product single page
         return `
             <div class="panel ${position}">
-                <a class="a-panel" href="">
+                <a class="a-panel" href="product.html?id=${id}">
                     <img class="panel-img"
                         src="${img}"
                         alt="${name}">
