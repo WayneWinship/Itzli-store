@@ -7,11 +7,11 @@ import "./scripts/cart/setupCart.js";
 // import addToCartHTML from "./scripts/cart/addToCartHTML.js"
 
 /****************************************
-  Notes: 
-    Needs a categories sections below the featured that redirects to the 
-    products page that uses address to check for said category, if they exist
-    sort by (couched, tables, etc) and if not then display the page normally.
-******************************************/
+ Notes: 
+ Needs a categories sections below the featured that redirects to the 
+ products page that uses address to check for said category, if they exist
+ sort by (couched, tables, etc) and if not then display the page normally.
+ ******************************************/
 
 const init = async () => {
     const data = await fetchData();
@@ -43,13 +43,13 @@ const displayFeatured = (featured) => {
         //href should be product.html + product.id
         // after you make product single page
         return `
-            <div class="panel ${position}">
-                <a class="a-panel" href="product.html?id=${id}">
-                    <img class="panel-img"
-                        src="${img}"
-                        alt="${name}">
-                </a>
-            </div>
+        <div class="panel ${position}">
+        <a class="a-panel" href="product.html?id=${id}">
+        <img class="panel-img"
+        src="${img}"
+        alt="${name}">
+        </a>
+        </div>
         `
     }).join('')
 
@@ -95,3 +95,7 @@ const displayFeatured = (featured) => {
 window.addEventListener('DOMContentLoaded', init);
 
 // Needs display data
+const loading = grab('.loading');
+setTimeout(() => {
+    loading.style.display = 'none';
+}, 700);

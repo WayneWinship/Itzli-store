@@ -83,5 +83,32 @@ const companiesSortMenu = (store) => {
     })
 }
 
+const typeSidebarMenu = (store) => {
+    let types = ['all', ...new Set(store.map((itm) => itm.type))];
+    const listContainer = grab('.type-list-container');
 
-export { searchFunctionality, companiesSortMenu }
+    listContainer.innerHTML = types.map((type) => {
+        return `
+            <button class="type-btn">${type}</button>
+        `
+    }).join('')
+
+    listContainer.addEventListener('click', function (e) {
+        const element = e.target;
+        if (element.classList.contains('type-btn')) {
+            let newStore = [];
+            if (element.textContent === 'all') {
+                newStore = paginate([...store]);
+            } else {
+                newStore = paginate(store.filter((itm) => itm.type === e.target.textContent))
+            }
+
+            displayItems(newStore[0], grab('.products-container'))
+            displayButtons(grab('.button-container'), newStore, 0)
+            addBtnEvtListener(0, newStore);
+        }
+    })
+}
+
+
+export { searchFunctionality, companiesSortMenu, typeSidebarMenu }

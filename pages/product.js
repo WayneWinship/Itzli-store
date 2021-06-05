@@ -1,4 +1,4 @@
-// import "../scripts/toggleMenu.js"
+import "../scripts/toggleMenu.js"
 import { grab } from "../utils.js";
 import * as fakeApi from "../src/store-items.js";
 import { formatPrice } from "../utils.js";
@@ -57,3 +57,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 })
+
+const loading = grab('.loading');
+setTimeout(() => {
+    loading.style.display = 'none';
+}, 200);

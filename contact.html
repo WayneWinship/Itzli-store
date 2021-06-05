@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles.css">
     <link rel="stylesheet" href="./src/fontawesome-free-5.15.3-web/css/all.min.css">
-    <title>Itzli Store | Products</title>
+    <title>Itzli Store | About</title>
 </head>
 
 <body>
-    <div class="loading">
-        <article></article>
-    </div>
     <nav>
         <div class="nav-center">
             <div class="nav-header">
@@ -149,22 +146,19 @@
             <button class="cart-checkout">checkout</button>
         </aside>
     </div>
-    <!-- Products main -->
-    <section class="products-main section-center">
-        <article class="products-sidebar">
-            <form class="search-form">
-                <input type="text" class="search-input" placeholder="Search...">
-            </form>
-            <h4 class="company-list-title">Companies</h4>
-            <div class="company-list-container"></div>
-            <h4 class="type-list-title">Type</h4>
-            <div class="type-list-container"></div>
-        </article>
-        <article class="products-container">
-
-        </article>
-    </section>
-    <div class="button-container"></div>
+    <!-- hero -->
+    <div class="form-center section-center">
+        <form class="contact-form">
+            <h3>Contact Us</h3>
+            <label class="input-label" for="name">Name:</label>
+            <input class="input-field" placeholder="Name" type="text" name="name">
+            <label class="input-label" for="email">Email:</label>
+            <input class="input-field" placeholder="Email" type="text" name="email">
+            <label class="input-label" for="comment">Comment</label>
+            <textarea class="input-field" name="comments" placeholder="Please share with us..."></textarea>
+            <button class="contact-submit" type="submit">Submit</button>
+        </form>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer-center">
@@ -199,7 +193,7 @@
         </div>
     </footer>
     <!-- JS -->
-    <script type="module" src="./pages/products.js"></script>
+    <script type="module" src="./pages/about.js"></script>
 </body>
 
 </html>

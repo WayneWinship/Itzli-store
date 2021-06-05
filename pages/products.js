@@ -4,7 +4,7 @@ import { setupStore, store } from "../scripts/store.js";
 import displayItems from "../scripts/displayItems.js";
 import paginate from "../scripts/paginate.js"
 import displayButtons from "../scripts/displayButtons.js";
-import { searchFunctionality, companiesSortMenu } from "../scripts/productsToolbar.js";
+import { searchFunctionality, companiesSortMenu, typeSidebarMenu } from "../scripts/productsToolbar.js";
 import addBtnEvtListener from '../scripts/addBtnEvtListener.js';
 import "../scripts/cart/setupCart.js"
 
@@ -46,9 +46,13 @@ if (store.length === 0) {
 addBtnEvtListener(index, newStoreList);
 searchFunctionality();
 companiesSortMenu(store);
+typeSidebarMenu(store);
 
 
-
+const loading = grab('.loading');
+setTimeout(() => {
+    loading.style.display = 'none';
+}, 1100);
 
 // btnContainer.addEventListener('click', function (e) {
 //     if (e.target.classList.contains('button-container')) return
