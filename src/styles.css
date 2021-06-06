@@ -859,6 +859,7 @@ footer{
 .skew-header{
   background-color: chocolate;
   transform: skewX(160deg);
+  width: 185px;
 }
 .reviews-container{
   display: grid;
@@ -950,6 +951,7 @@ footer{
   background: var(--clr-white);
   box-shadow: var(--dark-shadow);
   border-radius: var(--radius);
+  height: 75vh;
 }
 .products-container{
   display: grid;
@@ -1306,6 +1308,8 @@ footer{
   font-size: 18px;
   letter-spacing: var(--spacing);
   cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--radius);
 }
 .contact-submit:hover{
   background-color: var(--clr-black);
